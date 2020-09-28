@@ -1,17 +1,14 @@
 import React from "react";
 import emojipedia from "../emojipedia";
-
+import Entry from "./Entry";
 function generarTemas(topic) {
   return (
-    <div className="term">
-      <dt>
-        <span className="emoji" role="img" aria-label="Tense Biceps">
-          {topic.emoji}
-        </span>
-        <span>{topic.name}</span>
-      </dt>
-      <dd>{topic.meaning}</dd>
-    </div>
+    <Entry
+      key={topic.id}
+      emoji={topic.emoji}
+      name={topic.name}
+      meaning={topic.meaning}
+    />
   );
 }
 
